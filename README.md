@@ -1,6 +1,4 @@
 # -projetos_cdt
-Aqui está uma versão completa, rica e estruturada do arquivo README.md para o seu repositório no GitHub. Ela inclui snippets do seu próprio código, badges, instruções passo a passo e tabelas organizadas.
-Basta copiar o conteúdo abaixo e salvar como README.md no seu projeto:
 🚀 IA SKY: Assistente Pessoal, Automação Local e Google Calendar
 Bem-vindo ao repositório da IA SKY! Este projeto é uma assistente virtual unificada desenvolvida em Python que une o processamento de linguagem natural local (Ollama / Llama 3.1) com automação do sistema operacional, pesquisas na web e gestão da agenda do Google.
 O sistema possui interface gráfica (Tkinter) com suporte a abas de conversa, múltiplos usuários com autenticação criptografada, memória de longo prazo e Function Calling nativo.
