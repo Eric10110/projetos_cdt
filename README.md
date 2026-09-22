@@ -1,5 +1,17 @@
 # -projetos_cdt
-Aqui está o arquivo README.md formatado exatamente no padrão solicitado, documentando o projeto da IA SKY:
+🚀 IA SKY: Assistente Pessoal, Automação Local e Google Calendar
+Bem-vindo ao repositório da IA SKY! Este projeto é uma assistente virtual unificada desenvolvida em Python que une o processamento de linguagem natural local (Ollama / Llama 3.1) com automação do sistema operacional, pesquisas na web e gestão da agenda do Google.
+O sistema possui interface gráfica (Tkinter) com suporte a abas de conversa, múltiplos usuários com autenticação criptografada, memória de longo prazo e Function Calling nativo.
+
+📅 Estrutura e Módulos do Sistema
+O projeto é dividido em blocos bem definidos de funcionalidade e integração:
+
+⚙️ Bloco 1: Automação e Ferramentas Locais
+A assistente consegue interagir diretamente com o sistema operacional para executar tarefas e buscar informações externas:
+- Abertura de Aplicativos: Suporte a Windows, macOS e Linux para abrir softwares nativos ou instalados.
+- Comandos de Terminal: Execução remota via cmd/shell com timeout de segurança de 15 segundos.
+- Pesquisa Web: Módulo de busca dinâmica utilizando a biblioteca googlesearch-python.
+
 ## 📦 Dependências do Projeto
 
 | Biblioteca | Finalidade |
@@ -17,17 +29,24 @@ Aqui está o arquivo README.md formatado exatamente no padrão solicitado, docum
 ## ⚡ Guia de Instalação e Execução
 
 1. **Instale as dependências:**
-   ```bash
-   pip install ollama google-api-python-client google-auth-httplib2 google-auth-oauthlib googlesearch-python
+```bash
+pip install ollama google-api-python-client google-auth-httplib2 google-auth-oauthlib googlesearch-python
+```
 
- * Garanta que o Ollama esteja rodando com o modelo configurado:
-   ollama run llama3.1:8b
+* Garanta que o Ollama esteja rodando com o modelo configurado:
+```bash
+ollama run llama3.1:8b
+```
 
- * Execute o aplicativo:
-   python main.py
+* Execute o aplicativo:
+```bash
+python main.py
+```
 
 ⚙️ Módulos e Funcionalidades Principais
 1. Persistência de Dados & Banco SQLite
+
+```python
 # Inicialização e criação das tabelas do banco de dados relacional
 def inicializar_banco_dados():
     print("[INFO] Verificando e inicializando banco de dados...")
@@ -65,9 +84,11 @@ def inicializar_banco_dados():
 
     conexao.commit()
     conexao.close()
+```
 
 2. Automações Locais e Execução de Ferramentas
-# Abertura de aplicativos do sistema operacional
+Abertura de aplicativos do sistema operacional
+
 def abrir_aplicativo(nome_app: str) -> str:
     nome_clean = nome_app.lower().strip()
     sistema = sys.platform
